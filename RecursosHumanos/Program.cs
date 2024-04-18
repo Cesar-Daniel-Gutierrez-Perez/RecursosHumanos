@@ -15,7 +15,7 @@ opciones.UseSqlServer(connectionString));
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(option =>
     {
-        option.LoginPath = "/Acceso/Login";
+        option.LoginPath = "/Login";
         option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     });
 
@@ -38,5 +38,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+// Cambiar la ruta de inicio a la página de inicio de sesión
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Login");
+    return Task.CompletedTask;
+});
 
 app.Run();
