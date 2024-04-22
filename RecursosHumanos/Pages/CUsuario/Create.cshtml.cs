@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
+using RecursosHumanos.Controllers;
 
 namespace RecursosHumanos.Pages.CUsuario
 {
@@ -34,6 +35,8 @@ namespace RecursosHumanos.Pages.CUsuario
             {
                 return Page();
             }
+
+            Usuario.Clave = Encriptar.encriptar(Usuario.Clave);
 
             _context.Usuario.Add(Usuario);
             await _context.SaveChangesAsync();

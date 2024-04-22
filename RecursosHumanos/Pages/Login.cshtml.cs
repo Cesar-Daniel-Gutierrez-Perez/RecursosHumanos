@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
+using RecursosHumanos.Controllers;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Security.Claims;
 
 namespace RecursosHumanos.Pages
 {
@@ -17,13 +19,19 @@ namespace RecursosHumanos.Pages
 
         public IActionResult OnGet()
         {
+            ClaimsPrincipal claimsUser = HttpContext.User;
+
+            if (claimsUser.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("/Home");
+            }
             return Page();
         }
 
         [BindProperty]
         public Login Login { get; set; } = default!;
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
@@ -31,7 +39,7 @@ namespace RecursosHumanos.Pages
                 return Page();
             }
 
-            var usuario = _context.Usuario.FirstOrDefault(u => u.Nombre == Login.Nombre && u.Contraseña == Login.Contraseña);
+            var usuario = _context.Usuario.FirstOrDefault(u => u.Nombre == Login.Nombre && u.Clave == Encriptar.encriptar(Login.Clave));
             if (usuario == null)
             {
                 ViewData["Mensaje"] = "Nombre de usuario o contraseña incorrectos.";

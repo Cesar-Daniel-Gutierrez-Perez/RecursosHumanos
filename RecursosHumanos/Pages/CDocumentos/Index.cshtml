@@ -1,0 +1,54 @@
+﻿@page
+@model RecursosHumanos.Pages.CDocumentos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentos[0].Cedula_E)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentos[0].Cedula_img)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentos[0].Contrato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentos[0].Otro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Documentos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula_E)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula_img)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contrato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otro)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

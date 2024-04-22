@@ -1,0 +1,50 @@
+﻿@page
+@model RecursosHumanos.Pages.CDocumentos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Documentos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Documentos.Id" />
+            <div class="form-group">
+                <label asp-for="Documentos.Cedula_E" class="control-label"></label>
+                <input asp-for="Documentos.Cedula_E" class="form-control" />
+                <span asp-validation-for="Documentos.Cedula_E" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Documentos.Cedula_img" class="control-label"></label>
+                <input asp-for="Documentos.Cedula_img" class="form-control" />
+                <span asp-validation-for="Documentos.Cedula_img" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Documentos.Contrato" class="control-label"></label>
+                <input asp-for="Documentos.Contrato" class="form-control" />
+                <span asp-validation-for="Documentos.Contrato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Documentos.Otro" class="control-label"></label>
+                <input asp-for="Documentos.Otro" class="form-control" />
+                <span asp-validation-for="Documentos.Otro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

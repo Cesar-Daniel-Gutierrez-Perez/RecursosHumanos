@@ -1,0 +1,45 @@
+﻿@page
+@model RecursosHumanos.Pages.CAsistencia.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Asistencia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Asistencia.Id" />
+            <div class="form-group">
+                <label asp-for="Asistencia.Cedula_e" class="control-label"></label>
+                <input asp-for="Asistencia.Cedula_e" class="form-control" />
+                <span asp-validation-for="Asistencia.Cedula_e" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asistencia.Fecha" class="control-label"></label>
+                <input asp-for="Asistencia.Fecha" class="form-control" />
+                <span asp-validation-for="Asistencia.Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asistencia.Estado" class="control-label"></label>
+                <input asp-for="Asistencia.Estado" class="form-control" />
+                <span asp-validation-for="Asistencia.Estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

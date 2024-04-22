@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,65 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Home.cshtml",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\Home.cshtml",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Home.cshtml",
-              "RelativeToolTip": "RecursosHumanos\\Pages\\Home.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T21:46:27.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\Login.cshtml",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Login.cshtml",
-              "RelativeToolTip": "RecursosHumanos\\Pages\\Login.cshtml",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T20:41:35.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Interfaces\\IUsuario.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Interfaces\\IUsuario.cs",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Interfaces\\IUsuario.cs",
-              "RelativeToolTip": "RecursosHumanos\\Interfaces\\IUsuario.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T17:51:03.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Login.cshtml.cs",
-              "RelativeToolTip": "RecursosHumanos\\Pages\\Login.cshtml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T20:38:44.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Program.cs",
               "RelativeDocumentMoniker": "RecursosHumanos\\Program.cs",
               "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Program.cs",
               "RelativeToolTip": "RecursosHumanos\\Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACkAAAA8AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T22:21:21.139Z"
+              "WhenOpened": "2024-04-17T22:21:21.139Z",
+              "EditorCaption": ""
             }
           ]
         }

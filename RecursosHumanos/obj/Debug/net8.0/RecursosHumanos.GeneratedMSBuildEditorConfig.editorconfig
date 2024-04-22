@@ -26,6 +26,126 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\perez\source\repos\RecursosHumanos\RecursosHumanos
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CAsistencia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FzaXN0ZW5jaWFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CAsistencia/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FzaXN0ZW5jaWFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CAsistencia/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FzaXN0ZW5jaWFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CAsistencia/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FzaXN0ZW5jaWFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CAsistencia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FzaXN0ZW5jaWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDepartamento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcGFydGFtZW50b1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDepartamento/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcGFydGFtZW50b1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDepartamento/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcGFydGFtZW50b1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDepartamento/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcGFydGFtZW50b1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDepartamento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcGFydGFtZW50b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDocumentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RvY3VtZW50b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDocumentos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RvY3VtZW50b3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDocumentos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RvY3VtZW50b3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDocumentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RvY3VtZW50b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CDocumentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RvY3VtZW50b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CEmpleado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VtcGxlYWRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CEmpleado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VtcGxlYWRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CEmpleado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VtcGxlYWRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CEmpleado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VtcGxlYWRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CEmpleado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VtcGxlYWRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CExcusas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0V4Y3VzYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CExcusas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0V4Y3VzYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CExcusas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0V4Y3VzYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CExcusas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0V4Y3VzYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CExcusas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0V4Y3VzYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1JvbGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1JvbGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1JvbGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1JvbGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1JvbGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/perez/source/repos/RecursosHumanos/RecursosHumanos/Pages/CUsuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VzdWFyaW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

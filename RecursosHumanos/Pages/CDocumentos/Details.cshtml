@@ -1,0 +1,43 @@
+﻿@page
+@model RecursosHumanos.Pages.CDocumentos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Documentos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Cedula_E)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Cedula_E)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Cedula_img)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Cedula_img)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Contrato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Contrato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Otro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Otro)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Documentos.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

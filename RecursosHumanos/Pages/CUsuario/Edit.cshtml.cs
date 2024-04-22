@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using RecursosHumanos.Controllers;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
 
@@ -47,6 +48,8 @@ namespace RecursosHumanos.Pages.CUsuario
             {
                 return Page();
             }
+
+            Usuario.Clave = Encriptar.encriptar(Usuario.Clave);
 
             _context.Attach(Usuario).State = EntityState.Modified;
 

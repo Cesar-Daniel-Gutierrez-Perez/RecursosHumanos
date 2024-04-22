@@ -1,0 +1,46 @@
+﻿@page
+@model RecursosHumanos.Pages.CDocumentos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Documentos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Cedula_E)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Cedula_E)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Cedula_img)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Cedula_img)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Contrato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Contrato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Documentos.Otro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Documentos.Otro)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Documentos.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

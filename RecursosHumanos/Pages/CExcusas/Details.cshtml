@@ -1,0 +1,49 @@
+﻿@page
+@model RecursosHumanos.Pages.CExcusas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Excusas</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Excusas.Cedula_e)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excusas.Cedula_e)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Excusas.Inicio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excusas.Inicio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Excusas.Finalizacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excusas.Finalizacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Excusas.Motivo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excusas.Motivo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Excusas.Estado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excusas.Estado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Excusas.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

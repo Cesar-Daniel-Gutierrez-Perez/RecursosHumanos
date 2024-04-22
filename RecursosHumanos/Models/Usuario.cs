@@ -9,6 +9,6 @@ namespace RecursosHumanos.Models
         [Required]
         public String Nombre { get; set; }
         [Required]
-        public String Contraseña { get; set; }
+        public String Clave { get; set; }
     }
 }
