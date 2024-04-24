@@ -3,3 +3,91 @@
 @{
     Layout = "_Layout";
 }
+
+@section NavOptions {
+    @if (@Model.Rol == "3" || @Model.Rol=="4")
+    {
+        <!-- Nav Item - Usuario -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CUsuario/Index" id="Usuario">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Usuario</span>
+            </a>
+        </li>
+    }
+    
+    @if (@Model.Rol == "3" || @Model.Rol == "4")
+    {
+        <!-- Nav Item - Empleado -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CEmpleado/Index" id="Empleado">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Empleado</span>
+            </a>
+        </li>
+    }
+
+    @if (@Model.Rol == "2" || @Model.Rol == "4")
+    {
+        <!-- Nav Item - Asistencia -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CAsistencia/Index" id="Asistencia">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Asistencia</span>
+            </a>
+        </li>
+    }
+
+    @if (@Model.Rol == "3" || @Model.Rol == "4")
+    {
+        <!-- Nav Item - Departamento -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CDepartamento/Index" id="Departamento">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Departamento</span>
+            </a>
+        </li>
+    }
+
+    
+        <!-- Nav Item - Excusas -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CExcusas/Index" id="Excusas">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Excusas</span>
+            </a>
+        </li>
+    
+
+    
+        <!-- Nav Item - Documentos -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CDocumentos/Index" id="Documentos">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Documentos</span>
+            </a>
+        </li>
+    
+
+    @if (@Model.Rol == "3" || @Model.Rol == "4")
+    {
+        <!-- Nav Item - Roles -->
+        <li class="nav-item">
+            <a class="nav-link" href="/CRoles/Index" id="Roles">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Roles</span>
+            </a>
+        </li>
+    }
+
+    @if (@Model.Rol == "1" || @Model.Rol == "2" || @Model.Rol == "3")
+    {
+        <!-- Nav Item - Certificado -->
+        <li class="nav-item">
+            <a class="nav-link" href="index.html" id="Certificado">
+                <i class="fas fa-fw fa-clipboard-list"></i>
+                <span>Certificado</span>
+            </a>
+        </li>
+    }
+}

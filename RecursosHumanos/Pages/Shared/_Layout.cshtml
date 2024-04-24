@@ -25,7 +25,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../Home">
                 <div class="sidebar-brand-icon">
                     <i class="fas fa-desktop"></i>
                 </div>
@@ -35,62 +35,10 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Usuario -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CUsuario/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Usuario</span>
-                </a>
-            </li>
-            <!-- Nav Item - Empleado -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CEmpleado/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Empleado</span>
-                </a>
-            </li>
-            <!-- Nav Item - Asistencia -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CAsistencia/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Asistencia</span>
-                </a>
-            </li>
-            <!-- Nav Item - Departamento -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CDepartamento/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Departamento</span>
-                </a>
-            </li>
-            <!-- Nav Item - Excusas -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CExcusas/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Excusas</span>
-                </a>
-            </li>
-            <!-- Nav Item - Documentos -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CDocumentos/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Documentos</span>
-                </a>
-            </li>
-            <!-- Nav Item - Roles -->
-            <li class="nav-item">
-                <a class="nav-link" href="/CRoles/Index">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Roles</span>
-                </a>
-            </li>
-            <!-- Nav Item - Certificado -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-clipboard-list"></i>
-                    <span>Certificado</span>
-                </a>
-            </li>
+            <!-- Nav options -->
+            <ul id="nav-options">                
+                @RenderSection("NavOptions", required: false)
+            </ul>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -135,7 +83,7 @@
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="../Login" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Salir
                                 </a>

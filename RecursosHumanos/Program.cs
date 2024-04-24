@@ -11,6 +11,11 @@ var connectionString = builder.Configuration.GetConnectionString("CadenaSQL");
 
 builder.Services.AddDbContext<Db>(opciones =>
 opciones.UseSqlServer(connectionString));
+builder.Services.AddControllersWithViews();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
+});
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(option =>
@@ -32,6 +37,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 
