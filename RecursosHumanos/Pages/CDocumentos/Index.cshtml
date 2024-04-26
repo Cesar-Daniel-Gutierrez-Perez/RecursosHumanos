@@ -10,6 +10,13 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form method="get" action="./Index">
+    <div class="form-group">
+        <label for="nameSearch">Buscar por Cedula:</label>
+        <input type="text" class="form-control" id="nameSearch" name="cedula" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
 <table class="table">
     <thead>
         <tr>

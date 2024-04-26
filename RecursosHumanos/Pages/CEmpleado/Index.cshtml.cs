@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RecursosHumanos.Pages.CEmpleado
 {
@@ -18,12 +19,20 @@ namespace RecursosHumanos.Pages.CEmpleado
         {
             _context = context;
         }
-
+        [BindProperty(SupportsGet = true)]
+        public string Cedula { get; set; }
         public IList<Empleado> Empleado { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Empleado = await _context.Empleado.ToListAsync();
+            if (!string.IsNullOrEmpty(Cedula))
+            {
+                Empleado = await _context.Empleado.Where(u => u.Cedula.ToString().Contains(Cedula)).ToListAsync();
+            }
+            else
+            {
+                Empleado = await _context.Empleado.ToListAsync();
+            }
         }
     }
 }

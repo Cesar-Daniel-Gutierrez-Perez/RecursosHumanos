@@ -10,6 +10,13 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form method="get" action="./Index">
+    <div class="form-group">
+        <label for="dateSearch">Buscar por Fecha:</label>
+        <input type="date" class="form-control" id="dateSearch" name="fechaExacta" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
 <table class="table">
     <thead>
         <tr>

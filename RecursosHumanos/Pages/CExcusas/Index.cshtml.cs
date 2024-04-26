@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -18,12 +19,25 @@ namespace RecursosHumanos.Pages.CExcusas
         {
             _context = context;
         }
+        [BindProperty(SupportsGet = true)]
+        [DataType(DataType.Date)]
+        public DateTime FechaInicio { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        [DataType(DataType.Date)]
+        public DateTime FechaFin { get; set; }
         public IList<Excusas> Excusas { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Excusas = await _context.Excusas.ToListAsync();
+            if (FechaInicio != default && FechaFin != default && FechaInicio <= FechaFin)
+            {
+                Excusas = await _context.Excusas.Where(u => u.Inicio >= FechaInicio && u.Finalizacion <= FechaFin).ToListAsync();
+            }
+            else
+            {
+                Excusas = await _context.Excusas.ToListAsync();
+            }
         }
     }
 }
