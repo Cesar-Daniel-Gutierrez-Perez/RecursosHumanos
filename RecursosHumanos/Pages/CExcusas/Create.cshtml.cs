@@ -12,6 +12,7 @@ namespace RecursosHumanos.Pages.CExcusas
 {
     public class CreateModel : PageModel
     {
+        public string Rol { get; set; }
         private readonly RecursosHumanos.DAL.Db _context;
 
         public CreateModel(RecursosHumanos.DAL.Db context)
@@ -21,6 +22,7 @@ namespace RecursosHumanos.Pages.CExcusas
 
         public IActionResult OnGet()
         {
+            Rol = HttpContext.Session.GetString("Rol");
             return Page();
         }
 
@@ -34,10 +36,23 @@ namespace RecursosHumanos.Pages.CExcusas
             {
                 return Page();
             }
-
-            _context.Excusas.Add(Excusas);
-            await _context.SaveChangesAsync();
-
+            try
+            {
+                _context.Excusas.Add(Excusas);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex) {
+                if(ex.ToString().Contains("FOREIGN KEY")){
+                    TempData["Mensaje"] = "No existe Empleado con la cedula ingresada";
+                    return Page();
+                }
+                else
+                {
+                    TempData["Mensaje"] = ex;
+                    return Page();
+                }
+                
+            }
             return RedirectToPage("./Index");
         }
     }

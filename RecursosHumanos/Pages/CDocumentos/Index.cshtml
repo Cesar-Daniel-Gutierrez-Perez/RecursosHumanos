@@ -1,7 +1,7 @@
 ﻿@page
 @model RecursosHumanos.Pages.CDocumentos.IndexModel
 
-@{    
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -10,16 +10,12 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<form method="get" action="./Index">
-    <div class="form-group">
-        <label for="nameSearch">Buscar por Cedula:</label>
-        <input type="text" class="form-control" id="nameSearch" name="cedula" />
-    </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
-</form>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentos[0].Id)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Documentos[0].Cedula_E)
             </th>
@@ -38,6 +34,9 @@
     <tbody>
 @foreach (var item in Model.Documentos) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cedula_E)
             </td>

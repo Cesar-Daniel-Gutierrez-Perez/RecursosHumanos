@@ -13,6 +13,7 @@ namespace RecursosHumanos.Pages.CExcusas
 {
     public class EditModel : PageModel
     {
+        public string Rol { get; set; }
         private readonly RecursosHumanos.DAL.Db _context;
 
         public EditModel(RecursosHumanos.DAL.Db context)
@@ -25,6 +26,7 @@ namespace RecursosHumanos.Pages.CExcusas
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
+            Rol = HttpContext.Session.GetString("Rol");
             if (id == null)
             {
                 return NotFound();
@@ -52,7 +54,23 @@ namespace RecursosHumanos.Pages.CExcusas
 
             try
             {
-                await _context.SaveChangesAsync();
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception ex)
+                {
+                    if (ex.ToString().Contains("FOREIGN KEY"))
+                    {
+                        TempData["Mensaje"] = "No existe Empleado con la cedula ingresada";
+                        return Page();
+                    }
+                    else
+                    {
+                        TempData["Mensaje"] = ex;
+                        return Page();
+                    }
+                }                
             }
             catch (DbUpdateConcurrencyException)
             {

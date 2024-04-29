@@ -34,9 +34,26 @@ namespace RecursosHumanos.Pages.CAsistencia
             {
                 return Page();
             }
+            try
+            {
+                _context.Asistencia.Add(Asistencia);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                if (ex.ToString().Contains("FOREIGN KEY"))
+                {
+                    TempData["Mensaje"] = "No existe Empleado con la cedula ingresada";
+                    return Page();
+                }
+                else
+                {
+                    TempData["Mensaje"] = ex;
+                    return Page();
+                }
 
-            _context.Asistencia.Add(Asistencia);
-            await _context.SaveChangesAsync();
+            }
+            
 
             return RedirectToPage("./Index");
         }

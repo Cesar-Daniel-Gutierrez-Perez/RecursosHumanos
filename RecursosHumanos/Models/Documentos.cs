@@ -12,15 +12,12 @@ namespace RecursosHumanos.Models
         [Required]
         public long Cedula_E { get; set; }
 
-        [MaxLength]
         [Required]
         public byte[] Cedula_img { get; set; }
 
-        [MaxLength]
         [Required]
         public byte[] Contrato { get; set; }
 
-        [MaxLength]        
-        public byte[] Otro { get; set; }
+        public byte[]? Otro { get; set; }
     }
 }

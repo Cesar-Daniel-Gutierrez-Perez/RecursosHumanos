@@ -34,9 +34,40 @@ namespace RecursosHumanos.Pages.CEmpleado
             {
                 return Page();
             }
+            try
+            {
+                _context.Empleado.Add(Empleado);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                if (ex.ToString().Contains("The database operation was expected to "))
+                {
+                    TempData["Mensaje"] = "No se puede cambiar la Cedula de este usuario al tener relacion con otras tablas";
+                    return Page();
+                }
+                if (ex.ToString().Contains("FK__empleado__id_dep"))
+                {
+                    TempData["Mensaje"] = "No existe Departamento con el Id ingresado";
+                    return Page();
+                }
+                if (ex.ToString().Contains("FK__empleado__id_rol"))
+                {
+                    TempData["Mensaje"] = "No existe Rol con el Id ingresado";
+                    return Page();
+                }
+                if (ex.ToString().Contains("FK__empleado__id_usu"))
+                {
+                    TempData["Mensaje"] = "No existe Usuario con el Id ingresado";
+                    return Page();
+                }
+                else
+                {
+                    TempData["Mensaje"] = ex;
+                    return Page();
+                }
 
-            _context.Empleado.Add(Empleado);
-            await _context.SaveChangesAsync();
+            }           
 
             return RedirectToPage("./Index");
         }

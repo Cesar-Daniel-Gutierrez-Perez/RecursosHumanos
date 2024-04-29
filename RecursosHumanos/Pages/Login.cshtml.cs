@@ -43,12 +43,15 @@ namespace RecursosHumanos.Pages
             if (usuario != null)
             {
                 var empleado = _context.Empleado.FirstOrDefault(e => e.id_usuario == usuario.Id);
+                var id = usuario.Id;
                 var rol = empleado.id_rol;
+
                 HttpContext.Session.SetString("Rol", rol.ToString());
+                HttpContext.Session.SetString("Id", id.ToString());
             }
             if (usuario == null)
             {
-                ViewData["Mensaje"] = "Nombre de usuario o contraseña incorrectos.";
+                TempData["Mensaje"] = "Nombre de usuario o contraseña incorrectos.";
                 return Page();
             }            
             return RedirectToPage("/Home");

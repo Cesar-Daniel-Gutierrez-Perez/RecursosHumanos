@@ -18,20 +18,12 @@ namespace RecursosHumanos.Pages.CDocumentos
         {
             _context = context;
         }
-        [BindProperty(SupportsGet = true)]
-        public string Cedula { get; set; }
+
         public IList<Documentos> Documentos { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (!string.IsNullOrEmpty(Cedula))
-            {
-                Documentos = await _context.Documentos.Where(u => u.Cedula_E.ToString().Contains(Cedula)).ToListAsync();
-            }
-            else
-            {
-                Documentos = await _context.Documentos.ToListAsync();
-            }
+            Documentos = await _context.Documentos.ToListAsync();
         }
     }
 }

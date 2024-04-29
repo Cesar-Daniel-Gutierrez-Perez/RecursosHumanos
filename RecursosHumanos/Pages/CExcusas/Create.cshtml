@@ -33,11 +33,20 @@
                 <input asp-for="Excusas.Motivo" class="form-control" />
                 <span asp-validation-for="Excusas.Motivo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Excusas.Estado" class="control-label"></label>
-                <input asp-for="Excusas.Estado" class="form-control" />
-                <span asp-validation-for="Excusas.Estado" class="text-danger"></span>
-            </div>
+            @if (@Model.Rol == "3" || @Model.Rol == "4")
+            {
+                <div class="form-group">
+                    <label asp-for="Excusas.Estado" class="control-label" value="No aprobado"></label>
+                    <input asp-for="Excusas.Estado" class="form-control" value="No aprobado" />
+                    <span asp-validation-for="Excusas.Estado" class="text-danger" value="No aprobado"></span>
+                </div>
+            }
+            @if (TempData["Mensaje"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @TempData["Mensaje"]
+                </div>
+            }
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

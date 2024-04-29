@@ -21,6 +21,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Asistencia[0].Id)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Asistencia[0].Cedula_e)
             </th>
             <th>
@@ -35,6 +38,9 @@
     <tbody>
 @foreach (var item in Model.Asistencia) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cedula_e)
             </td>
