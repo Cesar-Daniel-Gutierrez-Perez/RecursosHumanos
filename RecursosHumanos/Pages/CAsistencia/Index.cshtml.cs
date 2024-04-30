@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -14,6 +15,7 @@ namespace RecursosHumanos.Pages.CAsistencia
 {
     public class IndexModel : PageModel
     {
+        public string Rol { get; set; }
         private readonly RecursosHumanos.DAL.Db _context;
 
         public IndexModel(RecursosHumanos.DAL.Db context)
@@ -22,16 +24,17 @@ namespace RecursosHumanos.Pages.CAsistencia
         }
         [BindProperty(SupportsGet = true)]
         [DataType(DataType.Date)]
-        public DateTime Fecha { get; set; }
+        public string Cedula { get; set; }
 
         
         public IList<Asistencia> Asistencia { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (Fecha != default)
+            Rol = HttpContext.Session.GetString("Rol");
+            if (!string.IsNullOrEmpty(Cedula))
             {
-                Asistencia = await _context.Asistencia.Where(u => u.Fecha.Date == Fecha.Date).ToListAsync();
+                Asistencia = await _context.Asistencia.Where(u => u.Cedula_e.ToString().Contains(Cedula)).ToListAsync();
             }
             else
             {

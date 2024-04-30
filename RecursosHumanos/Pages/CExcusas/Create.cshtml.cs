@@ -13,6 +13,8 @@ namespace RecursosHumanos.Pages.CExcusas
     public class CreateModel : PageModel
     {
         public string Rol { get; set; }
+        public string Cedula { get; set; }
+
         private readonly RecursosHumanos.DAL.Db _context;
 
         public CreateModel(RecursosHumanos.DAL.Db context)
@@ -23,6 +25,8 @@ namespace RecursosHumanos.Pages.CExcusas
         public IActionResult OnGet()
         {
             Rol = HttpContext.Session.GetString("Rol");
+            Cedula = HttpContext.Session.GetString("Cedula");
+
             return Page();
         }
 

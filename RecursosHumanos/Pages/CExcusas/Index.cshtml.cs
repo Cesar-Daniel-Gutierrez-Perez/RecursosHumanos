@@ -13,6 +13,8 @@ namespace RecursosHumanos.Pages.CExcusas
 {
     public class IndexModel : PageModel
     {
+        public string Rol { get; set; }
+
         private readonly RecursosHumanos.DAL.Db _context;
 
         public IndexModel(RecursosHumanos.DAL.Db context)
@@ -30,6 +32,7 @@ namespace RecursosHumanos.Pages.CExcusas
 
         public async Task OnGetAsync()
         {
+            Rol = HttpContext.Session.GetString("Rol");
             if (FechaInicio != default && FechaFin != default && FechaInicio <= FechaFin)
             {
                 Excusas = await _context.Excusas.Where(u => u.Inicio >= FechaInicio && u.Finalizacion <= FechaFin).ToListAsync();

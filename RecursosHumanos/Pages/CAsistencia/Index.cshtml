@@ -12,8 +12,8 @@
 </p>
 <form method="get" action="./Index">
     <div class="form-group">
-        <label for="dateSearch">Buscar por Fecha:</label>
-        <input type="date" class="form-control" id="dateSearch" name="fechaExacta" />
+        <label for="nameSearch">Buscar por Cedula:</label>
+        <input type="text" class="form-control" id="nameSearch" name="cedula" />
     </div>
     <button type="submit" class="btn btn-primary">Buscar</button>
 </form>
@@ -51,9 +51,15 @@
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                @if (@Model.Rol == "3" || @Model.Rol == "4")
+                {
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> 
+                }
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> 
+                @if (@Model.Rol == "3" || @Model.Rol == "4")
+                {
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>                
+                }                    
             </td>
         </tr>
 }

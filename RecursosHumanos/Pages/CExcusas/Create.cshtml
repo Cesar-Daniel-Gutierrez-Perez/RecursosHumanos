@@ -11,46 +11,90 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Excusas.Cedula_e" class="control-label"></label>
-                <input asp-for="Excusas.Cedula_e" class="form-control" />
-                <span asp-validation-for="Excusas.Cedula_e" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Excusas.Inicio" class="control-label"></label>
-                <input asp-for="Excusas.Inicio" class="form-control" />
-                <span asp-validation-for="Excusas.Inicio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Excusas.Finalizacion" class="control-label"></label>
-                <input asp-for="Excusas.Finalizacion" class="form-control" />
-                <span asp-validation-for="Excusas.Finalizacion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Excusas.Motivo" class="control-label"></label>
-                <input asp-for="Excusas.Motivo" class="form-control" />
-                <span asp-validation-for="Excusas.Motivo" class="text-danger"></span>
-            </div>
-            @if (@Model.Rol == "3" || @Model.Rol == "4")
-            {
+        @if (@Model.Rol == "3" || @Model.Rol =="4")
+        {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Excusas.Estado" class="control-label" value="No aprobado"></label>
-                    <input asp-for="Excusas.Estado" class="form-control" value="No aprobado" />
-                    <span asp-validation-for="Excusas.Estado" class="text-danger" value="No aprobado"></span>
+                    <label asp-for="Excusas.Cedula_e" class="control-label"></label>
+                    <input asp-for="Excusas.Cedula_e" class="form-control"/>
+                    <span asp-validation-for="Excusas.Cedula_e" class="text-danger"></span>
                 </div>
-            }
-            @if (TempData["Mensaje"] != null)
-            {
-                <div class="alert alert-danger" role="alert">
-                    @TempData["Mensaje"]
+                <div class="form-group">
+                    <label asp-for="Excusas.Inicio" class="control-label"></label>
+                    <input asp-for="Excusas.Inicio" class="form-control" />
+                    <span asp-validation-for="Excusas.Inicio" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Finalizacion" class="control-label"></label>
+                    <input asp-for="Excusas.Finalizacion" class="form-control" />
+                    <span asp-validation-for="Excusas.Finalizacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Motivo" class="control-label"></label>
+                    <input asp-for="Excusas.Motivo" class="form-control" />
+                    <span asp-validation-for="Excusas.Motivo" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Excusas.Estado" class="control-label"></label>
+                    <input asp-for="Excusas.Estado" class="form-control" />
+                    <span asp-validation-for="Excusas.Estado" class="text-danger" ></span>
+                </div>
+                
+                @if (TempData["Mensaje"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @TempData["Mensaje"]
+                    </div>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
             }
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        @if (@Model.Rol == "1" || @Model.Rol == "2")
+        {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Cedula_e" class="control-label"></label>
+                    <input asp-for="Excusas.Cedula_e" class="form-control" value="@Model.Cedula" readonly />
+                    <span asp-validation-for="Excusas.Cedula_e" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Inicio" class="control-label"></label>
+                    <input asp-for="Excusas.Inicio" class="form-control" />
+                    <span asp-validation-for="Excusas.Inicio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Finalizacion" class="control-label"></label>
+                    <input asp-for="Excusas.Finalizacion" class="form-control" />
+                    <span asp-validation-for="Excusas.Finalizacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Excusas.Motivo" class="control-label"></label>
+                    <input asp-for="Excusas.Motivo" class="form-control" />
+                    <span asp-validation-for="Excusas.Motivo" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Excusas.Estado" class="control-label"></label>
+                    <input asp-for="Excusas.Estado" class="form-control" value="En espera" readonly/>
+                    <span asp-validation-for="Excusas.Estado" class="text-danger"></span>
+                </div>
+                
+                @if (TempData["Mensaje"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @TempData["Mensaje"]
+                    </div>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        }
     </div>
 </div>
 

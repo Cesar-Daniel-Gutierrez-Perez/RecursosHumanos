@@ -45,9 +45,11 @@ namespace RecursosHumanos.Pages
                 var empleado = _context.Empleado.FirstOrDefault(e => e.id_usuario == usuario.Id);
                 var id = usuario.Id;
                 var rol = empleado.id_rol;
+                var c = empleado.Cedula;
 
                 HttpContext.Session.SetString("Rol", rol.ToString());
                 HttpContext.Session.SetString("Id", id.ToString());
+                HttpContext.Session.SetString("Cedula", c.ToString());
             }
             if (usuario == null)
             {

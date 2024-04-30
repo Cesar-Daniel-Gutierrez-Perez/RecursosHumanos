@@ -11,6 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("CadenaSQL");
 
 builder.Services.AddDbContext<Db>(opciones =>
 opciones.UseSqlServer(connectionString).EnableSensitiveDataLogging());
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession(options =>
 {

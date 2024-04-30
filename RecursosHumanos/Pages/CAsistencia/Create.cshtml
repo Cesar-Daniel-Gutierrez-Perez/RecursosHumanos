@@ -11,6 +11,8 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
+        @if (@Model.Rol != "1")
+        {
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -38,6 +40,37 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        }
+        @if (@Model.Rol == "1")
+        {
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Asistencia.Cedula_e" class="control-label" ></label>
+                    <input asp-for="Asistencia.Cedula_e" class="form-control" value="@Model.Cedula" readonly/>
+                    <span asp-validation-for="Asistencia.Cedula_e" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Asistencia.Fecha" class="control-label"></label>
+                    <input asp-for="Asistencia.Fecha" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")" readonly/>
+                    <span asp-validation-for="Asistencia.Fecha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Asistencia.Estado" class="control-label"></label>
+                    <input asp-for="Asistencia.Estado" class="form-control" value="Presente" readonly/>
+                    <span asp-validation-for="Asistencia.Estado" class="text-danger"></span>
+                </div>
+                @if (TempData["Mensaje"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @TempData["Mensaje"]
+                    </div>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        }
     </div>
 </div>
 
