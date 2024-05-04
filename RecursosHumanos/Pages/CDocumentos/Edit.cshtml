@@ -11,28 +11,28 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Documentos.Id" />
             <div class="form-group">
                 <label asp-for="Documentos.Cedula_E" class="control-label"></label>
-                <input asp-for="Documentos.Cedula_E" class="form-control" />
+                <input asp-for="Documentos.Cedula_E" class="form-control" readonly/>
                 <span asp-validation-for="Documentos.Cedula_E" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Documentos.Cedula_img" class="control-label"></label>
-                <input asp-for="Documentos.Cedula_img" class="form-control" />
-                <span asp-validation-for="Documentos.Cedula_img" class="text-danger"></span>
+                <label class="control-label"></label>
+                <input type="file" class="form-control" name="cedula" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Documentos.Contrato" class="control-label"></label>
-                <input asp-for="Documentos.Contrato" class="form-control" />
-                <span asp-validation-for="Documentos.Contrato" class="text-danger"></span>
+                <label class="control-label"></label>
+                <input type="file" class="form-control" name="certificado" />
+                <span class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Documentos.Otro" class="control-label"></label>
-                <input asp-for="Documentos.Otro" class="form-control" />
-                <span asp-validation-for="Documentos.Otro" class="text-danger"></span>
+                <label class="control-label"></label>
+                <input type="file" class="form-control" name="otro" />
+                <span class="text-danger"></span>
             </div>
             @if (TempData["Mensaje"] != null)
             {

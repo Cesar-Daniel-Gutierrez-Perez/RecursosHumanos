@@ -7,14 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
+using RecursosHumanos.Controllers;
 
 namespace RecursosHumanos.Pages.CDocumentos
 {
     public class CreateModel : PageModel
     {
-        public string Rol { get; set; }
+        FirebaseC fb = new FirebaseC("recursoshumanos-7b147.appspot.com");
 
+        public string Rol { get; set; }
         public string Cedula { get; set; }
+        
 
         private readonly RecursosHumanos.DAL.Db _context;
 
@@ -29,17 +32,19 @@ namespace RecursosHumanos.Pages.CDocumentos
             Cedula = HttpContext.Session.GetString("Cedula");
             return Page();
         }
-
+       
         [BindProperty]
-        public Documentos Documentos { get; set; } = default!;
+        public Documentos Documentos { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(IFormFile cedula, IFormFile certificado, IFormFile otro)
         {
-            if (!ModelState.IsValid)
+            Documentos.Cedula_img = await fb.Subir(cedula, "Cedula" + (Documentos.Id + 1), "Cedulas");
+            Documentos.Contrato = await fb.Subir(certificado, "Contrato" + (Documentos.Id + 1), "Contratos");
+            if (otro != null)
             {
-                return Page();
-            }
+                Documentos.Otro = await fb.Subir(otro, "Otro" + (Documentos.Id + 1), "Otros");
+            }            
             try
             {
                 _context.Documentos.Add(Documentos);
@@ -58,8 +63,7 @@ namespace RecursosHumanos.Pages.CDocumentos
                     return Page();
                 }
 
-            }
-            
+            }           
 
             return RedirectToPage("./Index");
         }

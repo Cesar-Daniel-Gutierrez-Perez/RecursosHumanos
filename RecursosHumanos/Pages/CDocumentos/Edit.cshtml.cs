@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using RecursosHumanos.Controllers;
 using RecursosHumanos.DAL;
 using RecursosHumanos.Models;
 
@@ -13,6 +14,7 @@ namespace RecursosHumanos.Pages.CDocumentos
 {
     public class EditModel : PageModel
     {
+        FirebaseC fb = new FirebaseC("recursoshumanos-7b147.appspot.com");
         private readonly RecursosHumanos.DAL.Db _context;
 
         public EditModel(RecursosHumanos.DAL.Db context)
@@ -41,11 +43,13 @@ namespace RecursosHumanos.Pages.CDocumentos
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(IFormFile cedula, IFormFile certificado, IFormFile otro)
         {
-            if (!ModelState.IsValid)
+            Documentos.Cedula_img = await fb.Subir(cedula, "Cedula" + Documentos.Id , "Cedulas");
+            Documentos.Contrato = await fb.Subir(certificado, "Contrato" + Documentos.Id, "Contratos");
+            if (otro != null)
             {
-                return Page();
+                Documentos.Otro = await fb.Subir(otro, "Otro" + Documentos.Id, "Otros");
             }
 
             _context.Attach(Documentos).State = EntityState.Modified;

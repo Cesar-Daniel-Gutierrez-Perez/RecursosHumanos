@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\cdocumentos\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\cdocumentos\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\cdocumentos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\cdocumentos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\controllers\\pdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\controllers\\pdf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\certificado.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\certificado.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\cdocumentos\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\cdocumentos\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\cdocumentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\cdocumentos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|c:\\users\\perez\\source\\repos\\recursoshumanos\\recursoshumanos\\pages\\cdocumentos\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30980AA9-A986-4A7F-A45B-504B4544FED7}|RecursosHumanos\\RecursosHumanos.csproj|solutionrelative:recursoshumanos\\pages\\cdocumentos\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Certificado.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Certificado.cshtml.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\Certificado.cshtml.cs",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\Certificado.cshtml.cs",
-              "RelativeToolTip": "RecursosHumanos\\Pages\\Certificado.cshtml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T17:05:06.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pdf.cs",
-              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Controllers\\Pdf.cs",
-              "RelativeDocumentMoniker": "RecursosHumanos\\Controllers\\Pdf.cs",
-              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Controllers\\Pdf.cs",
-              "RelativeToolTip": "RecursosHumanos\\Controllers\\Pdf.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T17:04:49.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml.cs",
               "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml.cs",
               "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml.cs",
               "RelativeToolTip": "RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEAAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T17:02:00.249Z",
+              "WhenOpened": "2024-05-04T17:46:21.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml",
               "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml",
               "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml",
               "RelativeToolTip": "RecursosHumanos\\Pages\\CDocumentos\\Create.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-30T17:01:50.623Z",
+              "WhenOpened": "2024-05-04T17:46:20.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml.cs",
+              "RelativeToolTip": "RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAvwC4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:14:55.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\perez\\source\\repos\\RecursosHumanos\\RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml",
+              "RelativeToolTip": "RecursosHumanos\\Pages\\CDocumentos\\Edit.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-03T19:14:33.764Z",
               "EditorCaption": ""
             }
           ]

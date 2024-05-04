@@ -12,6 +12,8 @@ namespace RecursosHumanos.Pages.CDocumentos
 {
     public class IndexModel : PageModel
     {
+        public string Rol { get; set; }
+        public string Cedula { get; set; }
         private readonly RecursosHumanos.DAL.Db _context;
 
         public IndexModel(RecursosHumanos.DAL.Db context)
@@ -23,6 +25,8 @@ namespace RecursosHumanos.Pages.CDocumentos
 
         public async Task OnGetAsync()
         {
+            Rol = HttpContext.Session.GetString("Rol");
+            Cedula = HttpContext.Session.GetString("Cedula");
             Documentos = await _context.Documentos.ToListAsync();
         }
     }

@@ -29,7 +29,7 @@ namespace RecursosHumanos.Pages
             }
             Id = HttpContext.Session.GetString("Id");
             var Empleado = _context.Empleado.FirstOrDefault(u => u.id_usuario.ToString() == Id );
-            String contenido = "La empresa certifica que el Empleado " + Empleado.Nombre + " de cedula " + Empleado.Cedula + " trabaja desde " + Empleado.Fecha_Contratacion;
+            String contenido = "La empresa certifica que el Empleado: \n" + Empleado.Nombre + " de cedula " + Empleado.Cedula + " trabaja desde " + Empleado.Fecha_Contratacion + "\n\n\nGenerado el: " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Byte[] pdf = Pdf.GenerarPDF(contenido);
 
             

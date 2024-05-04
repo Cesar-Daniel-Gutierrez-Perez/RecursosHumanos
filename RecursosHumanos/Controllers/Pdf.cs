@@ -5,29 +5,46 @@ public class Pdf
 {
     public static byte[] GenerarPDF(string contenido)
     {
-        // Crear un nuevo documento PDF
         PdfDocument document = new PdfDocument();
-
-        // Agregar una página al documento
         PdfPage page = document.AddPage();
-
-        // Obtener el objeto XGraphics para dibujar en la página
         XGraphics gfx = XGraphics.FromPdfPage(page);
 
-        // Definir una fuente y un formato para el texto
+        XRect contentArea = new XRect(50, 100, page.Width - 100, page.Height - 200);
+
         XFont font = new XFont("Arial", 12, XFontStyle.Regular);
         XStringFormat format = new XStringFormat();
 
-        // Dibujar el contenido en la página
-        gfx.DrawString(contenido, font, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), format);
+        XFont headerFont = new XFont("Arial", 16, XFontStyle.Bold);
+        gfx.DrawString("Certificado Laboral", headerFont, XBrushes.Black, new XRect(0, 50, page.Width, 50), format);
 
-        // Crear un MemoryStream para almacenar el PDF
+        XPen pen = new XPen(XColors.Black, 1);
+        gfx.DrawRectangle(pen, contentArea);
+
+        contentArea.Inflate(-10, -10);
+
+        // Dividir el contenido en líneas
+        string[] lines = contenido.Split('\n');
+
+        double yPosition = contentArea.Top;
+        foreach (string line in lines)
+        {
+            XSize size = gfx.MeasureString(line, font);
+
+            if (yPosition + size.Height > contentArea.Bottom)
+            {
+                // Si la línea no cabe en la página actual, agregar una nueva página
+                page = document.AddPage();
+                gfx = XGraphics.FromPdfPage(page);
+                yPosition = contentArea.Top;
+            }
+
+            gfx.DrawString(line, font, XBrushes.Black, new XRect(contentArea.Left, yPosition, contentArea.Width, contentArea.Height), format);
+            yPosition += size.Height;
+        }
+
         using (MemoryStream ms = new MemoryStream())
         {
-            // Guardar el documento en el MemoryStream
             document.Save(ms, false);
-
-            // Convertir el MemoryStream a un array de bytes y devolverlo
             return ms.ToArray();
         }
     }
